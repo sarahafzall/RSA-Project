@@ -18,8 +18,6 @@ void demoEncrypt(const std::string& text, uint64 n, uint64 e) { // B8
 	//split into k-groups
 	int start = 0;  int end = 0;
 	uint64 M = 0;
-	uint64 ans;
-	string ansSTR;
 	for (int i = 0;i < newText.length();i++) {
 		M = 0;
 		if (end - start == k) {
@@ -27,7 +25,7 @@ void demoEncrypt(const std::string& text, uint64 n, uint64 e) { // B8
 				M = (M * 100) + (newText[j] - 'A');
 			}
 			cout << M << " ";
-			start = end;
+			start+=k;
 		}
 		else {
 			end++;
@@ -38,7 +36,7 @@ void demoEncrypt(const std::string& text, uint64 n, uint64 e) { // B8
 
 
 int main() {
-	uint64 p, q, e, n,d;
+	uint64 p, q, e, n, d;
 	while (true) {
 		cout << "\nEnter p: ";
 		cin >> p;
