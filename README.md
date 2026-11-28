@@ -1,7 +1,4 @@
 # RSA-Project
-
-# RSA-Project
-
 ## About
 This project implements the RSA (Rivest–Shamir–Adleman) public-key cryptosystem in C++17.
 
